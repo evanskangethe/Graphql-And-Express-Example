@@ -21,13 +21,20 @@ const UserType = new GraphQLObjectType({
 })
 
 const RootQuery = new GraphQLObjectType({
-  name: 'RootQuery',
+  name: 'RootQueryType',
   fields: {
     user:{
       type: UserType,
       args: {id: {type:GraphQLInt}},
-      resolve(parent,args){
+      resolve(parentValue,args){
         return axios.get(`http://localhost:3000/users/${args.id}`)
+          .then(res => res.data)
+      }
+    },
+    users:{
+      type: new GraphQLList(UserType),
+      resolve(parentValue,args){
+        return axios.get(`http://localhost:3000/users`)
           .then(res => res.data)
       }
     }

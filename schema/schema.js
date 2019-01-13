@@ -19,3 +19,21 @@ const UserType = new GraphQLObjectType({
     gender:{type:GraphQLString}
   })
 })
+
+const RootQuery = new GraphQLObjectType({
+  name: 'RootQuery',
+  fields: {
+    user:{
+      type: UserType,
+      args: {id: {type:GraphQLInt}},
+      resolve(parent,args){
+        return axios.get(`http://localhost:3000/users/${args.id}`)
+          .then(res => res.data)
+      }
+    }
+  }
+})
+
+module.exports = new GraphQLSchema({
+  query: RootQuery
+})

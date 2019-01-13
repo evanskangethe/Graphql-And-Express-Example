@@ -1,4 +1,4 @@
-[{"id":1,"first_name":"Christa","last_name":"Somersett","email":"csomersett0@geocities.jp","gender":"Female"},
+{"users":[{"id":1,"first_name":"Christa","last_name":"Somersett","email":"csomersett0@geocities.jp","gender":"Female"},
 {"id":2,"first_name":"Heywood","last_name":"Armsby","email":"harmsby1@angelfire.com","gender":"Male"},
 {"id":3,"first_name":"Joela","last_name":"Pollicott","email":"jpollicott2@kickstarter.com","gender":"Female"},
 {"id":4,"first_name":"Randolph","last_name":"Wabersinke","email":"rwabersinke3@360.cn","gender":"Male"},
@@ -998,3 +998,4 @@
 {"id":998,"first_name":"Katharina","last_name":"Bidwell","email":"kbidwellrp@google.nl","gender":"Female"},
 {"id":999,"first_name":"Doris","last_name":"Jennison","email":"djennisonrq@businessinsider.com","gender":"Female"},
 {"id":1000,"first_name":"Leighton","last_name":"Lenard","email":"llenardrr@java.com","gender":"Male"}]
+}
